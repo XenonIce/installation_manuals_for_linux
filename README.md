@@ -1,1 +1,1 @@
-# xenonice-calculator
+# randomgenerator
