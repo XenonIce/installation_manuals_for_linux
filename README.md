@@ -1,1 +1,1 @@
-# randomgenerator
+# installation_manuals_for_linux
