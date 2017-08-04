@@ -1,0 +1,38 @@
+Copyright 2017 by XenonIce
+xenonicelp@gmail.com
+www.github.com/XenonIce
+
+
+How To Install The Software For PiCAN 2
+
+It is best to start with a brand new Raspbian image. Download the latest from:
+https://www.raspberrypi.org/downloads/raspbian/After 
+
+first time boot up, do an update and upgrade first.
+
+1. sudo apt-get update 
+
+2. sudo apt-get upgrade
+
+3. sudo reboot
+
+4. Add the overlays by: 
+
+sudo nano /boot/config.txt
+
+5. Add these 3 lines to the end of file:
+
+dtparam=spi=on
+dtoverlay=mcp2515-can0,oscillator=16000000,interrupt=25
+dtoverlay=spi-bcm2835
+
+6. Add these lines to /etc/network/interfaces
+auto can0
+iface can0 inet manual
+pre-up /sbin/ip link set $IFACE type can bitrate 500000 triple-sampling on
+up /sbin/ifconfig $IFACE up
+down /sbin/ifconfig $IFACE down
+
+7. sudo reboot
+
+Have fun!

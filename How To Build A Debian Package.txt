@@ -1,0 +1,29 @@
+Copyright 2017 by XenonIce
+xenonicelp@gmail.com
+www.github.com/XenonIce
+
+
+How To Build A Debian Package
+
+1. sudo apt-get installpackaging-dev
+2. Make a workspace:
+
+mkdir example
+cd example
+
+3. Get the sources and extract them:
+
+tar -xvf example.tar.gz
+
+4.  cd example
+5. dh_make --createorig
+6. dpkg-buildpackage
+7.  dpkg-buildpackage -us -uc or if this does not work type only dpkg-buildpackage 
+8. debian/rules clean
+9. cd .. && dpkg-source -b QUELLVERZEICHNIS/ && cd -
+10. debian/rules build
+11. fakeroot debian/rules binary
+12. dpkg-genchanges >../PAKET_VERSION_ARCHITEKTUR.changes
+13. cd .. && dpkg-source --after-build QUELLVERZEICHNIS/ && cd - 
+
+Have fun!

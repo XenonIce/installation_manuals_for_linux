@@ -1,0 +1,14 @@
+Copyright 2017 by XenonIce
+xenonicelp@gmail.com
+www.github.com/XenonIce
+
+
+How To Install Can-Isotp Kernel-Module
+
+1. git clone https://github.com/hartkopp/can-isotp.git
+2. sudo apt-get install build-essential rasperry-kernel-headers
+3. make
+4. sudo make modules_install
+5. sudo modprobe can-isotp
+
+Have fun!
