@@ -1,6 +1,5 @@
 Copyright 2017 by XenonIce
-xenonicelp@gmail.com
-www.github.com/XenonIce
+www.github.com/konstizockt
 
 
 How To Install Can-Isotp Kernel-Module
